@@ -1,0 +1,82 @@
+// Reset
+
+html {
+  box-sizing: border-box;
+  font: $font-style $font-variant $font-weight $font-size $font-family;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+figure,
+body {
+  color: $font-color;
+  margin: 0;
+}
+
+ul li p {
+  margin: 0;
+}
+
+// Headings
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0 0 1rem 0;
+  font-weight: $heading-font-weight;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  color: $heading-font-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Headings Individual
+
+h1 {
+  font-size: $h1-size;
+}
+h2 {
+  font-size: $h2-size;
+}
+h3 {
+  font-size: $h3-size;
+}
+h4 {
+  font-size: $h4-size;
+}
+h5 {
+  font-size: $h5-size;
+}
+
+// Links
+
+a {
+  text-decoration: none;
+  color: $font-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+
+// Text
+
+.text {
+  display: flex;
+  align-items: center;
+}
+
+.big-text {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+}
