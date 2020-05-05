@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const Article = ({ edge }) => {
   return (
-    <Link to={`clase/${edge.node.fields.slug}`}>
+    <Link to={`/clase/${edge.node.fields.slug}`}>
       <article className="article">
         {edge.node.frontmatter.title}
       </article>
