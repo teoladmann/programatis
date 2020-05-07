@@ -3,4 +3,22 @@
   flex-direction: column;
   max-width: $width;
   margin: auto;
+  padding: $padding;
+
+  a {
+    border-radius: 4px;
+    &:hover {
+      background: $link-hover-background;
+    }
+    &:active,
+    &:focus {
+      background: darken($link-hover-background, 10%);
+    }
+  }
+}
+
+@include small-breakpoint {
+  .container {
+    padding: $padding-bigger;
+  }
 }

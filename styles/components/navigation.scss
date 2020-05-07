@@ -1,10 +1,17 @@
 .nav-container {
   max-width: $width;
+  padding: $padding;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 160px;
+}
+
+@include small-breakpoint {
+  .nav-container {
+    padding: $padding-bigger;
+  }
 }
 
 .brand {
@@ -45,7 +52,7 @@
     &:active,
     &.active {
       color: #111;
-      background: rgba(0, 0, 0, 0.05);
+      background: $link-hover-background;
     }
   }
 }
