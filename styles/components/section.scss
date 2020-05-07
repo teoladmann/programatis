@@ -1,3 +1,16 @@
 .section {
   margin: 40px 0;
 }
+
+.section {
+  a {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #ebebeb;
+
+    &:last-of-type {
+      border-bottom-color: transparent;
+    }
+  }
+}

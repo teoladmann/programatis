@@ -21,6 +21,8 @@ ul li p {
   margin: 0;
 }
 
+// Mobile First
+
 // Headings
 
 h1,
@@ -41,19 +43,37 @@ h5,
 // Headings Individual
 
 h1 {
-  font-size: $h1-size;
+  font-size: $h1-mobile;
 }
 h2 {
-  font-size: $h2-size;
+  font-size: $h2-mobile;
 }
 h3 {
-  font-size: $h3-size;
+  font-size: $h3-mobile;
 }
 h4 {
-  font-size: $h4-size;
+  font-size: $h4-mobile;
 }
 h5 {
-  font-size: $h5-size;
+  font-size: $h5-mobile;
+}
+
+@include small-breakpoint {
+  h1 {
+    font-size: $h1-size;
+  }
+  h2 {
+    font-size: $h2-size;
+  }
+  h3 {
+    font-size: $h3-size;
+  }
+  h4 {
+    font-size: $h4-size;
+  }
+  h5 {
+    font-size: $h5-size;
+  }
 }
 
 // Links
@@ -61,6 +81,7 @@ h5 {
 a {
   text-decoration: none;
   color: $font-color;
+  font-weight: 500;
 
   &:hover,
   &:active,
@@ -76,9 +97,10 @@ a {
   align-items: center;
 }
 
-.big-text {
+.subheading {
   font-size: 1.2rem;
   font-weight: 500;
+  font-family: $font-family;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.6);
 }
