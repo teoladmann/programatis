@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
     <>
       <Helmet title="Aprende a Programar Gratis">
         <meta name="description" content={config.siteDescription} />
-        <link rel="icon" type="image/png" href={favicon} />
+        <link rel="shortcut icon" type="image/png" href={favicon} />
       </Helmet>
       <Navigation />
       <main className="container">{children}</main>
