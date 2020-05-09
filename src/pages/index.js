@@ -1,26 +1,43 @@
-import React from "react";
-import {graphql} from 'gatsby';
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
 
-import Layout from "../layout";
-import Section from "../components/Section";
-import Article from "../components/Article";
+import config from '../data/SiteConfig';
+
+import Layout from '../layout';
+import Section from '../components/Section';
+import Article from '../components/Article';
 
 const Home = ({ data }) => {
-
   return (
-    <Layout>
-      <div className="welcome">
-          <h1>Hola <span role="img" aria-label="Emoji Saludo">👋</span></h1>
-          <h2 className="subheading">Aprende a programar gratis <span role="img" aria-label="Flecha Abajo">⬇️</span></h2>
-      </div>
-      <Section>
-        {data.allMarkdownRemark.edges.map((edge, key) => (
-          <Article key={key} edge={edge} />
-        ))}
-      </Section>
-    </Layout>
-  )
-}
+    <>
+      <Helmet title={config.siteTitle}>
+        <meta name="description" content={config.siteDescription} />
+      </Helmet>
+      <Layout>
+        <div className="welcome">
+          <h1>
+            Hola{' '}
+            <span role="img" aria-label="Emoji Saludo">
+              👋
+            </span>
+          </h1>
+          <h2 className="subheading">
+            Aprende a programar gratis{' '}
+            <span role="img" aria-label="Flecha Abajo">
+              ⬇️
+            </span>
+          </h2>
+        </div>
+        <Section>
+          {data.allMarkdownRemark.edges.map((edge, key) => (
+            <Article key={key} edge={edge} />
+          ))}
+        </Section>
+      </Layout>
+    </>
+  );
+};
 
 export const pageQuery = graphql`
   query queryHome {
@@ -38,6 +55,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default Home;
