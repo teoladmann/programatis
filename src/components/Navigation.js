@@ -28,7 +28,7 @@ const Navigation = () => {
           aria-label="Toggle Dark Mode"
           title="Toggle Dark Mode"
         >
-          {theme.dark ? (
+          {theme && theme.dark ? (
             <span role="img" aria-label="Sun Emoji">
               ☀️
             </span>
