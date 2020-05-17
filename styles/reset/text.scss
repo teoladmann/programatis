@@ -1,0 +1,94 @@
+// Headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.title1-not-heading {
+  margin: 0 0 1rem 0;
+  font-weight: $heading-font-weight;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  color: $heading-font-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Headings Dark
+
+.dark-theme {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .title1-not-heading {
+    color: $heading-dark;
+  }
+}
+
+// Headings Individual
+
+h1 {
+  font-size: $h1-mobile;
+}
+h2 {
+  font-size: $h2-mobile;
+}
+h3 {
+  font-size: $h3-mobile;
+}
+h4 {
+  font-size: $h4-mobile;
+}
+h5 {
+  font-size: $h5-mobile;
+}
+
+@include small-breakpoint {
+  h1 {
+    font-size: $h1-size;
+  }
+  h2 {
+    font-size: $h2-size;
+  }
+  h3 {
+    font-size: $h3-size;
+  }
+  h4 {
+    font-size: $h4-size;
+  }
+  h5 {
+    font-size: $h5-size;
+  }
+}
+
+// Text
+
+.text {
+  display: flex;
+  align-items: center;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: $font-family;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.title1-not-heading {
+  font-size: $h1-size;
+}
+
+// Text Dark
+
+.dark-theme {
+  color: $text-dark;
+  .subheading,
+  .text {
+    color: $text-dark;
+  }
+}

@@ -1,0 +1,28 @@
+// Reset
+
+html {
+  box-sizing: border-box;
+  font: $font-style $font-variant $font-weight $font-size $font-family;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+figure,
+body {
+  color: $font-color;
+  margin: 0;
+}
+
+ul li p {
+  margin: 0;
+}
+
+// Dark Theme
+
+body.dark-theme {
+  background: $background-dark;
+}
