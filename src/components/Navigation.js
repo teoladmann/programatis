@@ -19,9 +19,6 @@ const Navigation = () => {
         </Link>
       </div>
       <div className="links">
-        <Link to="/acerca">
-          <span>Acerca</span>
-        </Link>
         <button
           className="button-theme"
           onClick={() => toggleDark()}
