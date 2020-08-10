@@ -346,4 +346,8 @@ code[class*='language-'] ::selection {
       color: #888;
     }
   }
+  :not(pre) > code[class*='language-'] {
+    background: #333;
+    color: $text-dark;
+  }
 }
